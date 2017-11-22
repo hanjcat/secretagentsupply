@@ -25,72 +25,6 @@ header {
   width: 100%;
 }
 
-nav {
-  max-width: 960px;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#bottom {
-  width: 100%;
-  padding-left: 8%;
-  background-color: firebrick;
-}
-
-nav span {
-  padding: 0.75rem 0rem 0.75rem 0rem;
-  background-color: transparent;
-}
-
-main {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-footer {
-  width: 100%;
-  min-height: 5rem;
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  align-items: center;
-  background-color: black;
-}
-
-footer span {
-  padding-left: 8%;
-}
-
-.card {
-  width: 30%;
-  height: 15rem;
-  border: 4px solid black;
-  margin-right: 3.3%;
-  display: flex;
-  flex-flow: column nowrap;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.card span {
-  text-align: center;
-  width: 100%;
-  padding: 0.5rem 0rem;
-}
-
-.black {
-  padding: 1rem 0rem 1rem 2rem;
-}
-
-.white {
-  background-color: white;
-  color: black;
-}
-
 #top {
   width: 100%;
   min-height: 2.32rem;
@@ -105,11 +39,11 @@ footer span {
 #top img {
   background-color: black;
   max-height: 1.5rem;
-  padding-left: 0.5rem;
+  padding: 0.5rem;
 }
 
 #top span {
-  padding: 0.66rem 0rem 0.66rem 1rem;
+  padding: 0.66rem 0rem 0.66rem 0.5rem;
 }
 
 #banner {
@@ -147,6 +81,32 @@ footer span {
   line-height: 1.2;
 }
 
+#bottom {
+  width: 100%;
+  padding-left: 8%;
+  background-color: firebrick;
+}
+
+nav {
+  max-width: 960px;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav span {
+  padding: 0.75rem 0rem 0.75rem 0rem;
+  background-color: transparent;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
 #products {
   width: 960px;
   min-height: 19rem;
@@ -157,11 +117,24 @@ footer span {
   align-items: center;
 }
 
-#pen {
+#pen, #watch, #glasses {
+  width: 30%;
+  height: 15rem;
+  border: 4px solid black;
+  margin-right: 3.3%;
   display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
-#pen, #watch, #glasses {
+#pen span, #watch span, #glasses span {
+  text-align: center;
+  width: 100%;
+  padding: 0.5rem 0rem;
+}
+
+.card {
   width: 100%;
   min-height: 200px;
   display: flex;
@@ -169,16 +142,9 @@ footer span {
   align-items: center;
 }
 
-#pen img {
+#pen img, #watch img, #glasses img {
   max-height: 9rem;
-}
-
-#watch img {
-  max-height: 9rem;
-}
-
-#glasses img {
-  max-width: 9rem;
+  margin: 2rem auto;
 }
 
 #contact {
@@ -197,4 +163,76 @@ footer span {
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
+}
+
+footer {
+  width: 100%;
+  min-height: 5rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: black;
+}
+
+footer span {
+  padding-left: 8%;
+}
+
+.black {
+  padding: 1rem 0rem 1rem 2rem;
+}
+
+.white {
+  background-color: white;
+  color: black;
+}
+
+#mediabot {
+  display: none;
+  width: 100%;
+  background-color: firebrick;
+}
+
+@media only screen and (max-width: 1024px) {
+  #top, #banner div, #bottom, #products, #contact, footer span {
+    padding-left: 0%;
+  }
+
+  #bottom {
+    display: none;
+  }
+
+  #mediabot {
+    display: block;
+  }
+
+  nav {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #glasses {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  #products, #contact {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  #pen, #watch {
+    width: 47%;
+    margin-right: 0;
+  }
+
+  #contact div {
+    width: 35%;
+    margin-right: 0;
+  }
+
 }
